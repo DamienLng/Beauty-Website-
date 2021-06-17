@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Beauty Company - {{ page_title }}</title>
+    <link rel="stylesheet" href="/static/css/style.css?id=2">
+  </head>
+
+  <body>
+  {% include 'header.html' %}
+  {% include 'nav.html' %}
+  {% block content %}{% endblock %}
+  {% include 'footer.html' %}
+  </body>
+</html>

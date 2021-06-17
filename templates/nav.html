@@ -1,0 +1,33 @@
+<!-- <h2>
+    <a href="{{ url_for('home') }}"> HOME </a> 
+    - <a href="wishlist page.html"> WISHLIST </a> 
+    - <a href="contact us page.html"> CONTACT US </a> 
+    - <input type="search" name="search" placeholder="Looking for...">
+</h2> -->
+
+<h2>
+  <ul>
+    <li><a href="{{ url_for('home') }}">HOME</a></li>
+    <li><a href="{{ url_for('category', id=1) }}">Skincare</a></li>
+    <li><a href="{{ url_for('category', id=2) }}">Makeup</a></li>
+    <li><a href="{{ url_for('category', id=3) }}">Hair, Hand & Body</a></li>
+    <li><a href="{{ url_for('category', id=4) }}">Brands</a></li>
+    <li><a href="wishlist page.html">WISHLIST</a></li>
+    <li><a href="contact us page.html">CONTACT US</a></li>
+    <!-- <div class="dropdown">
+      <button class="dropbtn">CATEGORY</button>
+      <div class="category-content">
+        <a href="{{ url_for('category', id=1) }}">Skincare</a>
+        <a href="{{ url_for('category', id=2) }}">Makeup</a>
+        <a href="{{ url_for('category', id=3) }}">Hair, Hand & Body</a>
+        <a href="{{ url_for('category', id=4) }}">Brands</a>
+      </div>
+    </div> -->
+    <!-- <input type="search" name="search" placeholder="Looking for..."> -->
+  </ul>
+</h2>
+
+
+
+
+

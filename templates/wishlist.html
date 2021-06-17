@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% for wishlist in wishlists %}
+<p>category name:  {{ wishlist.name }}<br>
+Description: {{ wishlist.description }}</p>
+
+{% endfor %}
+
+
+{% endblock %}

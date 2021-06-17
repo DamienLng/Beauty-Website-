@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% for category in categories %}
+<p>category name:  {{ category.name }}<br>
+Description: {{ category.description }}</p>
+
+{% endfor %}
+
+
+{% endblock %}
