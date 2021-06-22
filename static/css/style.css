@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=New+Tegomin&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=New+Tegomin&display=swap');
 
 html {
   font-family: 'New Tegomin', serif;
@@ -43,7 +43,7 @@ footer {
   padding: 16px;
   font-size: 16px;
   border: none;
-}
+} */
 
 /* Dropdown Buttons Trial 1 */ 
 /* The container <div> - needed to position the dropdown content */
@@ -80,86 +80,69 @@ footer {
 /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
 
-
-/* Dropdown Buttons Trial 2 */
-/* Style The Dropdown Button */
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-
-
-
-
-
-
-
-
-
-/* links on the homepage  */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* The navigation menu */
+.navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-li {
+/* Navigation links */
+.navbar a {
   float: left;
-}
-
-li a {
-  display: block;
+  font-size: 16px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
+/* The subnavigation menu */
+.subnav {
+  float: left;
+  overflow: hidden;
 }
 
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+}

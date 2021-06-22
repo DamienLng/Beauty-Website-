@@ -1,33 +1,71 @@
-<!-- <h2>
-    <a href="{{ url_for('home') }}"> HOME </a> 
-    - <a href="wishlist page.html"> WISHLIST </a> 
-    - <a href="contact us page.html"> CONTACT US </a> 
-    - <input type="search" name="search" placeholder="Looking for...">
-</h2> -->
 
-<h2>
-  <ul>
-    <li><a href="{{ url_for('home') }}">HOME</a></li>
-    <li><a href="{{ url_for('category', id=1) }}">Skincare</a></li>
-    <li><a href="{{ url_for('category', id=2) }}">Makeup</a></li>
-    <li><a href="{{ url_for('category', id=3) }}">Hair, Hand & Body</a></li>
-    <li><a href="{{ url_for('category', id=4) }}">Brands</a></li>
-    <li><a href="wishlist page.html">WISHLIST</a></li>
-    <li><a href="contact us page.html">CONTACT US</a></li>
-    <!-- <div class="dropdown">
-      <button class="dropbtn">CATEGORY</button>
-      <div class="category-content">
-        <a href="{{ url_for('category', id=1) }}">Skincare</a>
-        <a href="{{ url_for('category', id=2) }}">Makeup</a>
-        <a href="{{ url_for('category', id=3) }}">Hair, Hand & Body</a>
-        <a href="{{ url_for('category', id=4) }}">Brands</a>
-      </div>
-    </div> -->
-    <!-- <input type="search" name="search" placeholder="Looking for..."> -->
-  </ul>
-</h2>
+    <!-- - <input type="search" name="search" placeholder="Looking for..."> -->
 
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+<div class="navbar">
+  <a href="{{ url_for('home') }}">Home</a>
+  <div class="subnav">
+    <button class="subnavbtn">Skincare <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#company">Cleansers</a>
+      <a href="#team">Serums</a>
+      <a href="#careers">Toners</a>
+      <a href="#careers">Masks</a>
+      <a href="#careers">Facial Treatments</a>
+      <a href="#careers">Exfoliator</a>
+      <a href="#careers">Suncare</a>
+      <a href="#careers">Moisturisers</a>
+      <a href="#careers">All Skincare</a>
+      <a href="#careers">Bestsellers</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">Makeup <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#bring">Base</a>
+      <a href="#deliver">Eyes</a>
+      <a href="#package">Face</a>
+      <a href="#express">Lips</a>
+      <a href="#express">Foundations</a>
+      <a href="#express">Mascaras</a>
+      <a href="#express">Concealer</a>
+      <a href="#express">All Makeup</a>
+      <a href="#express">Bestsellers</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">Hair, Hand & Body <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#link1">Hair</a>
+      <a href="#link2">Hand + Body</a>
+      <a href="#link3">All Hair, Hand & Body</a>
+      <a href="#link4">Bestsellers</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">Brands <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#link1">Dr.Jart+</a>
+      <a href="#link2">JMsolution</a>
+      <a href="#link3">Elizabeth Arden</a>
+      <a href="#link4">Bareminerals</a>
+      <a href="#link1">Cocochi Cosme</a>
+      <a href="#link2">Lancome</a>
+      <a href="#link3">Banila Co.</a>
+      <a href="#link4">Cl'e de peau</a>
+      <a href="#link1">Whoo</a>
+      <a href="#link2">Pola</a>
+      <a href="#link3">Verbena linn</a>
+      <a href="#link4">Voolga</a>
+      <a href="#link1">Laneige</a>
+      <a href="#link2">Too Cool For School</a>
+    </div>
+  </div>
+  <a href="contact us page.html">Contact Us</a>
+  <a href="wishlist page.html">Wishlist</a>
+  <a href="bestsellers page.html">Bestsellers</a>
+</div>
