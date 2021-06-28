@@ -1,71 +1,77 @@
-
-    <!-- - <input type="search" name="search" placeholder="Looking for..."> -->
-
-
-
+<!-- This is the dropdown button font for each category on the nav bar -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<!-- This is the Homepage route on the navbar  -->
 <div class="navbar">
   <a href="{{ url_for('home') }}">Home</a>
+<!-- This is the skincare category page with a dropdown button -->
   <div class="subnav">
     <button class="subnavbtn">Skincare <i class="fa fa-caret-down"></i></button>
+<!-- These are the subcategories for the skincare category  -->
     <div class="subnav-content">
-      <a href="#company">Cleansers</a>
-      <a href="#team">Serums</a>
-      <a href="#careers">Toners</a>
-      <a href="#careers">Masks</a>
-      <a href="#careers">Facial Treatments</a>
-      <a href="#careers">Exfoliator</a>
-      <a href="#careers">Suncare</a>
-      <a href="#careers">Moisturisers</a>
-      <a href="#careers">All Skincare</a>
-      <a href="#careers">Bestsellers</a>
+      <a href="skincare/subcategory/cleansers">Cleansers</a>
+      <a href="skincare/subcategory/serums">Serums</a>
+      <a href="skincare/subcategory/toners">Toners</a>
+      <a href="skincare/subcategory/masks">Masks</a>
+      <a href="skincare/subcategory/facialtreatments">Facial Treatments</a>
+      <a href="skincare/subcategory/exfoliator">Exfoliator</a>
+      <a href="skincare/subcategory/suncare">Suncare</a>
+      <a href="skincare/subcategory/moisturisers">Moisturisers</a>
+      <a href="skincare/subcategory/allskincare">All Skincare</a>
+      <a href="skincare/subcategory/bestsellers">Bestsellers</a>
     </div>
   </div>
+<!-- This is the makeup category page with a dropdown button -->
   <div class="subnav">
     <button class="subnavbtn">Makeup <i class="fa fa-caret-down"></i></button>
+<!-- These are the subcategories for the Makeup category  -->
     <div class="subnav-content">
-      <a href="#bring">Base</a>
-      <a href="#deliver">Eyes</a>
-      <a href="#package">Face</a>
-      <a href="#express">Lips</a>
-      <a href="#express">Foundations</a>
-      <a href="#express">Mascaras</a>
-      <a href="#express">Concealer</a>
-      <a href="#express">All Makeup</a>
-      <a href="#express">Bestsellers</a>
+      <a href="makeup/subcategory/base">Base</a>
+      <a href="makeup/subcategory/eyes">Eyes</a>
+      <a href="makeup/subcategory/face">Face</a>
+      <a href="makeup/subcategory/lips">Lips</a>
+      <a href="makeup/subcategory/foundations">Foundations</a>
+      <a href="makeup/subcategory/mascaras">Mascaras</a>
+      <a href="makeup/subcategory/concealer">Concealer</a>
+      <a href="makeup/subcategory/allmakeup">All Makeup</a>
+      <a href="makeup/subcategory/bestsellers">Bestsellers</a>
     </div>
   </div>
+<!-- This is the Hair, Hand & Body category page with a dropdown button -->
   <div class="subnav">
     <button class="subnavbtn">Hair, Hand & Body <i class="fa fa-caret-down"></i></button>
+<!-- These are the subcategories for the Hair, Hand & Body category  -->
     <div class="subnav-content">
-      <a href="#link1">Hair</a>
-      <a href="#link2">Hand + Body</a>
-      <a href="#link3">All Hair, Hand & Body</a>
-      <a href="#link4">Bestsellers</a>
+      <a href="hairhandbody/subcategory/hair">Hair</a>
+      <a href="hairhandbody/subcategory/handbody">Hand + Body</a>
+      <a href="hairhandbody/subcategory/allhairhandbody">All Hair, Hand & Body</a>
+      <a href="hairhandbody/subcategory/bestsellers">Bestsellers</a>
     </div>
   </div>
+<!-- This is the Brands category page with a dropdown button -->
   <div class="subnav">
     <button class="subnavbtn">Brands <i class="fa fa-caret-down"></i></button>
+<!-- These are the subcategories for the Brands category  -->
     <div class="subnav-content">
-      <a href="#link1">Dr.Jart+</a>
-      <a href="#link2">JMsolution</a>
-      <a href="#link3">Elizabeth Arden</a>
-      <a href="#link4">Bareminerals</a>
-      <a href="#link1">Cocochi Cosme</a>
-      <a href="#link2">Lancome</a>
-      <a href="#link3">Banila Co.</a>
-      <a href="#link4">Cl'e de peau</a>
-      <a href="#link1">Whoo</a>
-      <a href="#link2">Pola</a>
-      <a href="#link3">Verbena linn</a>
-      <a href="#link4">Voolga</a>
-      <a href="#link1">Laneige</a>
-      <a href="#link2">Too Cool For School</a>
+      <a href="brands/subcategory/dr.jart+">Dr.Jart+</a>
+      <a href="brands/subcategory/jmsolution">JMsolution</a>
+      <a href="brands/subcategory/elizabetharden">Elizabeth Arden</a>
+      <a href="brands/subcategory/bareminerals">Bareminerals</a>
+      <a href="brands/subcategory/cocochicosme">Cocochi Cosme</a>
+      <a href="brands/subcategory/lancome">Lancome</a>
+      <a href="brands/subcategory/banilaco.">Banila Co.</a>
+      <a href="brands/subcategory/cledepeau">Cl'e de peau</a>
+      <a href="brands/subcategory/whoo">Whoo</a>
+      <a href="brands/subcategory/pola">Pola</a>
+      <a href="brands/subcategory/verbenalinn">Verbena linn</a>
+      <a href="brands/subcategory/voolga">Voolga</a>
+      <a href="brands/subcategory/laneige">Laneige</a>
+      <a href="brands/subcategory/toocoolforschool">Too Cool For School</a>
     </div>
   </div>
-  <a href="contact us page.html">Contact Us</a>
-  <a href="wishlist page.html">Wishlist</a>
-  <a href="bestsellers page.html">Bestsellers</a>
+<!-- These are the other pages shown on the navbar  -->
+  <a href="contactuspage.html">Contact Us</a>
+  <a href="wishlistpage.html">Wishlist</a>
+  <a href="bestsellerspage.html">Bestsellers</a>
+  <!-- <input type="text" placeholder="Search.."> -->
 </div>
