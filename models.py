@@ -1,46 +1,46 @@
 from sqlalchemy.orm import backref
 from main import db
 
-Productcategory = db.Table('Productcategory', db.Model.metadata,
+ProductCategory = db.Table('ProductCategory', db.Model.metadata,
                     db.Column('Product_id', db.Integer, db.ForeignKey('Product.id')),
                     db.Column('Category_id', db.Integer, db.ForeignKey('Category.id'))
                     )
 
-Productsubcategory = db.Table('Productsubcategory', db.Model.metadata,
+ProductSubcategory = db.Table('ProductSubcategory', db.Model.metadata,
                     db.Column('Product_id', db.Integer, db.ForeignKey('Product.id')),
                     db.Column('Subcategory_id', db.Integer, db.ForeignKey('Subcategory.id'))
                    )
 
-Brandcategory = db.Table('Brandcategory', db.Model.metadata,
-                    db.Column('Brand_id', db.ForeignKey('Brand.id')),
-                    db.Column('Category_id', db.ForeignKey('Category.id'))
-                   )
+# BrandCategory = db.Table('BrandCategory', db.Model.metadata,
+#                     db.Column('Brand_id', db.ForeignKey('Brand.id')),
+#                     db.Column('Category_id', db.ForeignKey('Category.id'))
+#                    )
 
-Brandsubcategory = db.Table('Brandsubcategory', db.Model.metadata,
-                    db.Column('Brand_id', db.ForeignKey('Brand.id')),
-                    db.Column('Subategory_id', db.ForeignKey('Subcategory.id'))
-                   )
+# BrandSubcategory = db.Table('BrandSubcategory', db.Model.metadata,
+#                     db.Column('Brand_id', db.ForeignKey('Brand.id')),
+#                     db.Column('Subategory_id', db.ForeignKey('Subcategory.id'))
+#                    )
 
 
 class Category(db.Model):
-
   __tablename__ = 'Category'
+
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String())
   description = db.Column(db.Text())
 
-  product = db.relationship('Product', secondary=Productcategory, back_populates='productcategory')
-  brands = db.relationship('Brand', secondary=Brandcategory, back_populates='brandcategory')
-  products = db.relationship('Product', backref="categories")
+  products = db.relationship('Product', secondary=ProductCategory, back_populates='category')
+  # brands = db.relationship('Brand', secondary=Brandcategory, back_populates='brandcategory')
+  #products = db.relationship('Product', backref="categories")
 
 
-class Brand(db.Model):
-  __tablename__ = 'Brand'
-  id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String())
+# class Brand(db.Model):
+#   __tablename__ = 'Brand'
+#   id = db.Column(db.Integer, primary_key=True)
+#   name = db.Column(db.String())
   
-  subcategory = db.relationship('Subcategory', secondary=Brandsubcategory, back_populates='brands')
-  category = db.relationship('Category', secondary=Brandcategory, back_populates='brands')
+#   subcategory = db.relationship('Subcategory', secondary=BrandSubcategory, back_populates='brands')
+#   category = db.relationship('Category', secondary=BrandCategory, back_populates='brands')
 
 
 class Subcategory(db.Model):
@@ -48,9 +48,11 @@ class Subcategory(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String())
   description = db.Column(db.Text())
+  category = db.Column(db.Integer, db.ForeignKey("Category.id"))
 
-  brands = db.relationship('Brand', secondary=Brandsubcategory, back_populates='subcategory')
-  products = db.relationship('Product', secondary=Productsubcategory, back_populates='subcategory')
+
+  # brands = db.relationship('Brand', secondary=BrandSubcategory, back_populates='subcategory')
+  products = db.relationship('Product', secondary=ProductSubcategory, back_populates='subcategory')
 
 
 class Product(db.Model):
@@ -62,11 +64,11 @@ class Product(db.Model):
   price = db.Column(db.String())
   image = db.Column(db.String())
   ingredients = db.Column(db.Text())
-  category = db.Column(db.Integer, db.ForeignKey("Category.id"))
-  brand = db.Column(db.Integer, db.ForeignKey("Brand.id"))
+  # category = db.Column(db.Integer, db.ForeignKey("Category.id"))
+  # brand = db.Column(db.Integer, db.ForeignKey("Brand.id"))
 
-  category = db.relationship('Category', secondary=Productcategory, back_populates='products')
-  subcategory = db.relationship('Subcategory', secondary=Productsubcategory, back_populates='products')
-  
+  category = db.relationship('Category', secondary=ProductCategory, back_populates='products')
+  subcategory = db.relationship('Subcategory', secondary=ProductSubcategory, back_populates='products')
+
 
 
