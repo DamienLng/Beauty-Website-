@@ -9,16 +9,16 @@
     <button class="subnavbtn">Skincare <i class="fa fa-caret-down"></i></button>
 <!-- These are the subcategories for the skincare category  -->
     <div class="subnav-content">
-      <a href="{{ url_for('cleanser', category='skincare', name='cleansers') }}">Cleansers</a>
-      <a href="skincare/serums">Serums</a>
-      <a href="skincare/toners">Toners</a>
-      <a href="skincare/masks">Masks</a>
-      <a href="skincare/facial_treatments">Facial Treatments</a>
-      <a href="skincare/exfoliator">Exfoliator</a>
-      <a href="skincare/suncare">Suncare</a>
-      <a href="skincare/moisturisers">Moisturisers</a>
-      <a href="skincare/all_skincare">All Skincare</a>
-      <a href="skincare/best_sellers">Bestsellers</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Cleanser') }}">Cleansers</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Serums') }}">Serums</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Toner') }}">Toners</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Mask') }}">Masks</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Facial_Treatments') }}">Facial Treatments</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Exfoliator') }}">Exfoliator</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Suncare') }}">Suncare</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Moisturisers') }}">Moisturisers</a>
+      <a href="{{ url_for('subcat', category='skincare', name='All_Skincare') }}">All Skincare</a>
+      <a href="{{ url_for('subcat', category='skincare', name='Bestsellers') }}">Bestsellers</a>
     </div>
   </div>
 <!-- This is the makeup category page with a dropdown button -->
@@ -27,15 +27,15 @@
 <!-- These are the subcategories for the Makeup category  -->
     <div class="subnav-content">
 
-      <a href="{{ url_for('base', category='make_up', name='base') }}">Base</a>
-      <a href="{{ url_for('base', category='make_up', name='eyes') }}">Eyes</a>
-      <a href="{{ url_for('base', category='make_up', name='base') }}">Face</a>
-      <a href="{{ url_for('base', category='make_up', name='base') }}">Lips</a>
-      <a href="{{ url_for('base', category='make_up', name='base') }}">Foundations</a>
-      <a href="{{ url_for('base', category='make_up', name='base') }}">Mascaras</a>
-      <a href="{{ url_for('base', category='make_up', name='base') }}">Concealer</a>
-      <a href="{{ url_for('base', category='make_up', name='base') }}">All Makeup</a>
-      <a href="{{ url_for('base', category='make_up', name='base') }}">Bestsellers</a>
+      <a href="{{ url_for('subcat', category='make_up', name='Base') }}">Base</a>
+      <a href="{{ url_for('subcat', category='make_up', name='Eyes') }}">Eyes</a>
+      <a href="{{ url_for('subcat', category='make_up', name='Face') }}">Face</a>
+      <a href="{{ url_for('subcat', category='make_up', name='Lips') }}">Lips</a>
+      <a href="{{ url_for('subcat', category='make_up', name='Foundations') }}">Foundations</a>
+      <a href="{{ url_for('subcat', category='make_up', name='Mascaras') }}">Mascaras</a>
+      <a href="{{ url_for('subcat', category='make_up', name='Concealers') }}">Concealers</a>
+      <a href="{{ url_for('subcat', category='make_up', name='All_Makeup') }}">All Makeup</a>
+      <a href="{{ url_for('subcat', category='make_up', name='Bestsellers') }}">Bestsellers</a>
     </div>
   </div>
 <!-- This is the Hair, Hand & Body category page with a dropdown button -->
@@ -43,10 +43,10 @@
     <button class="subnavbtn">Hair, Hand & Body <i class="fa fa-caret-down"></i></button>
 <!-- These are the subcategories for the Hair, Hand & Body category  -->
     <div class="subnav-content">
-      <a href="hair_hand_body/hair">Hair</a>
-      <a href="hair_hand_body/hand_body">Hand + Body</a>
-      <a href="hair_hand_body/all_hair_hand_body">All Hair, Hand & Body</a>
-      <a href="hair_hand_body/best_sellers">Bestsellers</a>
+      <a href="{{ url_for('subcat', category='hair_hand_body', name='Hair') }}">Hair</a>
+      <a href="{{ url_for('subcat', category='hair_hand_body', name='Hand_Body') }}">Hand + Body</a>
+      <a href="{{ url_for('subcat', category='hair_hand_body', name='AllHair_Hand_Body') }}">All Hair, Hand & Body</a>
+      <a href="{{ url_for('subcat', category='hair_hand_body', name='Bestsellers') }}">Bestsellers</a>
     </div>
   </div>
 <!-- This is the Brands category page with a dropdown button -->
@@ -54,20 +54,20 @@
     <button class="subnavbtn">Brands <i class="fa fa-caret-down"></i></button>
 <!-- These are the subcategories for the Brands category  -->
     <div class="subnav-content">
-      <a href="brands/dr_jart+">Dr.Jart+</a>
-      <a href="brands/jmsolution">JMsolution</a>
-      <a href="brands/elizabeth_arden">Elizabeth Arden</a>
-      <a href="brands/bareminerals">Bareminerals</a>
-      <a href="brands/cocochi_cosme">Cocochi Cosme</a>
-      <a href="brands/lancome">Lancome</a>
-      <a href="brands/banila_co">Banila Co.</a>
-      <a href="brands/cle_de_peau">Cl'e de peau</a>
-      <a href="brands/whoo">Whoo</a>
-      <a href="brands/pola">Pola</a>
-      <a href="brands/verbena_linn">Verbena linn</a>
-      <a href="brands/voolga">Voolga</a>
-      <a href="brands/laneige">Laneige</a>
-      <a href="brands/too_cool_for_school">Too Cool For School</a>
+      <a href="{{ url_for('subcat', category='brands', name='Dr.Jart+') }}">Dr.Jart+</a>
+      <a href="{{ url_for('subcat', category='brands', name='jmsolution') }}">JMsolution</a>
+      <a href="{{ url_for('subcat', category='brands', name='elizabeth_arden') }}">Elizabeth Arden</a>
+      <a href="{{ url_for('subcat', category='brands', name='bareminerals') }}">Bareminerals</a>
+      <a href="{{ url_for('subcat', category='brands', name='cocochi_cosme') }}">Cocochi Cosme</a>
+      <a href="{{ url_for('subcat', category='brands', name='lancome') }}">Lancome</a>
+      <a href="{{ url_for('subcat', category='brands', name='banila_co') }}">Banila Co.</a>
+      <a href="{{ url_for('subcat', category='brands', name='cledepeau') }}">Cl'e de peau</a>
+      <a href="{{ url_for('subcat', category='brands', name='whoo') }}">Whoo</a>
+      <a href="{{ url_for('subcat', category='brands', name='pola') }}">Pola</a>
+      <a href="{{ url_for('subcat', category='brands', name='verbena_linn') }}">Verbena linn</a>
+      <a href="{{ url_for('subcat', category='brands', name='voolga') }}">Voolga</a>
+      <a href="{{ url_for('subcat', category='brands', name='laneige') }}">Laneige</a>
+      <a href="{{ url_for('subcat', category='brands', name='too_cool_for_school') }}">Too Cool For School</a>
     </div>
   </div>
 <!-- These are the other pages shown on the navbar  -->

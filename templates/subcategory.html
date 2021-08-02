@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% for Subcategory in subcat %}
+<p>Subcategory name: {{ Subcategory.name }}</p>
+<p>Description: {{ Subcategory.description }}</p>
+{% endfor %}
+
+{% endblock %}
