@@ -1,4 +1,4 @@
-from os import name
+from os import name, replace
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy, model
 from config import Config
@@ -9,11 +9,22 @@ db = SQLAlchemy(app)
 
 import models 
 
+
+
+# import jinja2
+# test = jinja2.Template('{{ test1 | replace("Facial_Treatments", "Facial Treatments") }}')
+# print(test)
+
+
 # Homepage route/query
 @app.route('/')
 def home():
     return render_template('home.html', page_title="HOME")
 
+# Replace Underscores test code
+# underscore = "Facial_Treatments"
+# alter = underscore.replace("_", " ")
+# print(alter)
 
 # General page route/query for all Subcategory pages     
 @app.route("/<string:category>/<string:name>")
