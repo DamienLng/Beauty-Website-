@@ -32,7 +32,7 @@
   margin: 0;
 }
 
-/* Add a red background color to navigation links on hover */
+/* Add a purple background colour to navigation links on hover */
 .navbar a:hover, .subnav:hover .subnavbtn {
   background-color: rgb(202, 139, 243);
 }
@@ -63,5 +63,40 @@
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
   display: block;
+}
+
+/* Homepage Grid Container Styling */
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 260px 260px 260px 260px;
+  grid-template-rows: 200px 200px;
+  justify-content: end;
+  grid-gap: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgb(235, 228, 228);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+} */
+
+#grid { 
+  display: grid;
+  grid-template-rows: 270px 270px 270px;
+  grid-template-columns: 280px 280px 280px;
+  justify-content: end;
+  grid-gap: 10px;
+  padding: 30px;
+  background-color: rgb(224, 196, 243);
+  }
+#grid > div {
+  font-size: 30px;
+  padding: 80px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: rgb(212, 207, 207);
 }
 
