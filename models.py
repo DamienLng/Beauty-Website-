@@ -21,7 +21,6 @@ ProductSubcategory = db.Table('ProductSubcategory', db.Model.metadata,
 #                     db.Column('Subategory_id', db.ForeignKey('Subcategory.id'))
 #                    )
 
-
 class Category(db.Model):
   __tablename__ = 'Category'
 

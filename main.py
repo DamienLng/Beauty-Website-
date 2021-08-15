@@ -16,10 +16,18 @@ import models
 # print(test)
 
 
+
 # Homepage route/query
+# @app.route('/')
+# def home():
+#     return render_template('home.html', page_title="HOME")
+
+# Homepage route/query for all Products
 @app.route('/')
 def home():
-    return render_template('home.html', page_title="HOME")
+    products = models.Product.query.all()
+    print(products)
+    return render_template('home.html', products = products)
 
 # Replace Underscores test code
 # underscore = "Facial_Treatments"
@@ -31,6 +39,8 @@ def home():
 def subcat(category, name):
     subcat = models.Subcategory.query.filter_by(name=name).all()
     return render_template('subcategory.html', subcat = subcat)
+
+
 
 
 if __name__ == "__main__":
