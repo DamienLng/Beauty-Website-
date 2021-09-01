@@ -1,8 +1,7 @@
 
 <!-- Homepage Content  -->
-{% extends 'layout.html' %}
-{% block content %}
 
+<!-- 
 <html>
 <body>
 <div class="grid-container"> 
@@ -10,12 +9,40 @@
   <img src="/static/images/product1.jpg" width="270" height="300">
   <img src="/static/images/product2.jpg" width="270" height="300">
   {% endfor %}
-</div>
+</div> -->
 
-{% endblock %}
 
+
+{% extends 'layout.html' %}
+{% block content %}
 </body>
 </html>
+
+<main>
+
+  <div class="filters"><!-- left hand bar in grey -->
+    <h2>FILTERS</h2>
+    <p>some stuff here</p>
+  </div>
+  
+  <div class="product_grid"> <!-- contains all products -->
+    <div class="product_item"> <!-- each product is in one of these -->
+      {% for Product in products %} 
+      <img src= "{{ Product.image }}"><p class="small">First Item</p> <!-- Displaying images from beauty database -->
+      {% endfor %}
+    </div><!-- product_item -->
+  </div><!-- product_grid -->
+
+</main> <!-- main is a grid layout master container - see the css -->
+    
+{% endblock %}
+
+
+
+
+
+
+
 
 
 
