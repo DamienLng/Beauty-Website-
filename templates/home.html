@@ -15,8 +15,6 @@
 
 {% extends 'layout.html' %}
 {% block content %}
-</body>
-</html>
 
 <main>
 
@@ -26,15 +24,14 @@
   </div>
   
   <div class="product_grid"> <!-- contains all products -->
+    {% for Product in products %} 
     <div class="product_item"> <!-- each product is in one of these -->
-      {% for Product in products %} 
       <img src= "{{ Product.image }}"><p class="small">First Item</p> <!-- Displaying images from beauty database -->
-      {% endfor %}
     </div><!-- product_item -->
+    {% endfor %}
   </div><!-- product_grid -->
 
 </main> <!-- main is a grid layout master container - see the css -->
-    
 {% endblock %}
 
 
@@ -44,6 +41,59 @@
 
 
 
+
+<header>
+  <h1>LOGO AND TITLE</h1>
+</header>
+
+
+<nav>
+  <h3>HOME - ABOUT - ETC</h3>
+</nav>
+
+
+<main>
+  <div class="filters"><!-- left hand bar in grey -->
+    <h2>FILTERS</h2>
+    <p>some stuff here</p>
+  </div>
+  
+  <div class="product_grid"> <!-- contains all products -->
+    <div class="product_item"> <!-- each product is in one of these -->
+      <img src="https://www.foursquare.co.nz/-/media/Project/Sitecore/Brands/Brand-Four-Square/charlie-square.jpg"><p class="small">First Item</p>
+    </div><!-- product_item -->
+    
+    <div class="product_item">
+      <img src="https://www.foursquare.co.nz/-/media/Project/Sitecore/Brands/Brand-Four-Square/charlie-square.jpg"><p class="small">Second Item</p>
+    </div><!-- product_item -->
+    
+    <div class="product_item">
+      <img src="https://www.foursquare.co.nz/-/media/Project/Sitecore/Brands/Brand-Four-Square/charlie-square.jpg"><p class="small">Third Item</p>
+    </div><!-- product_item -->
+    
+    <div class="product_item">
+      <img src="https://www.foursquare.co.nz/-/media/Project/Sitecore/Brands/Brand-Four-Square/charlie-square.jpg"><p class="small">Fourth Item</p>
+    </div><!-- product_item -->
+    
+    <div class="product_item">
+      <img src="https://www.foursquare.co.nz/-/media/Project/Sitecore/Brands/Brand-Four-Square/charlie-square.jpg"><p class="small">Fifth Item</p>
+    </div><!-- product_item -->
+    
+    <div class="product_item">
+      <img src="https://www.foursquare.co.nz/-/media/Project/Sitecore/Brands/Brand-Four-Square/charlie-square.jpg"><p class="small">Sixth Item</p>
+    </div><!-- product_item -->
+    
+    <div class="product_item">
+      <img src="https://www.foursquare.co.nz/-/media/Project/Sitecore/Brands/Brand-Four-Square/charlie-square.jpg"><p class="small">Seventh Item</p>
+    </div><!-- product_item -->
+    
+  </div><!-- product_grid -->
+</main> <!-- main is a grid layout master container - see the css -->
+
+
+<footer>
+  <h2>(c) 2021 Mr D</h2>
+</footer>
 
 
 
