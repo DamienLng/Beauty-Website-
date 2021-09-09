@@ -1,9 +1,8 @@
-/* The navigation menu */
+/* The navigation Bar Styling */
 .navbar {
   overflow: hidden;
   background-color: #333;
 }
-
 /* Navigation links */
 .navbar a {
   float: left;
@@ -13,13 +12,11 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-
 /* The subnavigation menu */
 .subnav {
   float: left;
   overflow: hidden;
 }
-
 /* Subnav button */
 .subnav .subnavbtn {
   font-size: 16px;
@@ -31,12 +28,10 @@
   font-family: inherit;
   margin: 0;
 }
-
 /* Add a purple background colour to navigation links on hover */
 .navbar a:hover, .subnav:hover .subnavbtn {
   background-color: rgb(202, 139, 243);
 }
-
 /* Style the subnav content - positioned absolute */
 .subnav-content {
   display: none;
@@ -46,53 +41,21 @@
   width: 100%;
   z-index: 1;
 }
-
 /* Style the subnav links */
 .subnav-content a {
   float: left;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
-
 /* Add a grey background color on hover */
 .subnav-content a:hover {
   background-color: #eee;
   color: black;
 }
-
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
   display: block;
 }
-
-/* Homepage All Products Grid Container Styling */
-/* .grid-container {
-  display: grid;
-  grid-template-rows: 270px 270px 270px;
-  grid-template-columns: 280px 280px 280px;
-  justify-content: end;
-  grid-gap: 10px;
-  padding: 30px;
-  background-color: rgb(224, 196, 243);
-}
-.grid-item {
-  font-size: 30px;
-  padding: 80px;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  background-color: rgb(212, 207, 207);
-}
-
-img {
-  border-radius: 8px; */
-/* } */
-
-
-
-
-
-
-
 
 
 
@@ -100,22 +63,24 @@ img {
 main {
   display: flex;
   flex-direction: row;
-  background-color: green;
+  background-color: rgb(202, 139, 243);
 }
-
 .filters {
   float: left;
   background-color: grey;
   padding: 10px;
   width: 250px;
 }
-
 .product_grid {
   padding: 10px 5px 5px 20px;
   display: grid;
   grid-template-columns: repeat(3, 370px);
 }
 
+/* Product image grid box styling  */
+img {
+  border-radius: 8px;
+}
 
 .product_item {
   text-align: center;
@@ -125,6 +90,12 @@ main {
 .product_item img {
   max-width: 350px;
 }
+
+/* .product_item .small p {
+  height: 50%;
+  margin: 0;
+  padding: 0;
+} */
 
 footer {
   background-color: black;
