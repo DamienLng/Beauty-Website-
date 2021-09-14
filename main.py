@@ -28,6 +28,12 @@ def contact():
     
     return render_template('contact_us.html')
 
+# Individual Product Pages 
+@app.route('/product.html')
+def product(): 
+
+    return render_template('product.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
 

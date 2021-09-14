@@ -79,7 +79,7 @@ main {
 
 /* Product image grid box styling  */
 img {
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .product_item {
@@ -87,15 +87,18 @@ img {
   font-weight: bold;
 }
 
+.product_grid a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.product_grid a:hover {
+  text-decoration: underline;
+}
+
 .product_item img {
   max-width: 350px;
 }
-
-/* .product_item .small p {
-  height: 50%;
-  margin: 0;
-  padding: 0;
-} */
 
 footer {
   background-color: black;
@@ -104,3 +107,7 @@ footer {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+/* Individual Product Pages Styling  */
+
+

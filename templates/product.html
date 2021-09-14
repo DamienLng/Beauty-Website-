@@ -1,0 +1,18 @@
+<!-- individual product pages layout  -->
+{% extends 'layout.html' %}
+{% block content %}
+
+<main>
+    <div class="product_grid"> <!-- contains all products -->
+        {% for Product in products %} 
+      <div class="product_item"> <!-- each product is in one of these -->
+        <img src= "{{ Product.image }}"><p class="small">{{ Product.name }}</p>
+      </div><!-- product_item -->
+      
+      <div class="product_item">
+         <p>{{ Product.name }}</p>
+      </div><!-- product_item -->
+        {% endfor %}
+    </div><!-- product_grid -->
+</main> <!-- main is a grid layout master container - see the css -->
+{% endblock %}
