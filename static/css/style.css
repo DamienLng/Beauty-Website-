@@ -1,3 +1,10 @@
+/* header styling */
+header{
+  margin: 3vh;
+  text-align: center;
+  padding-top: 3vh;
+}
+
 /* The navigation Bar Styling */
 .navbar {
   overflow: hidden;
@@ -37,7 +44,7 @@
   display: none;
   position: absolute;
   left: 0;
-  background-color: rgb(202, 139, 243);
+  background: white;
   width: 100%;
   z-index: 1;
 }
@@ -46,18 +53,13 @@
   float: left;
   color: rgb(0, 0, 0);
   text-decoration: none;
+  transition: 0.2s ease all;
 }
-/* Add a grey background color on hover */
-.subnav-content a:hover {
-  background-color: #eee;
-  color: black;
-}
+
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
   display: block;
 }
-
-
 
 /* Homepage Styling  */
 main {
@@ -67,15 +69,17 @@ main {
 }
 .filters {
   float: left;
-  background-color: grey;
+  background-color: rgb(202, 139, 243);
   padding: 10px;
   width: 250px;
 }
 .product_grid {
   padding: 10px 5px 5px 20px;
+  background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 370px);
 }
+
 
 /* Product image grid box styling  */
 img {
@@ -85,6 +89,9 @@ img {
 .product_item {
   text-align: center;
   font-weight: bold;
+  margin: 5px;
+  border-radius: 10px;
+  background-color:rgb(202, 139, 243);
 }
 
 .product_grid a {
@@ -92,12 +99,24 @@ img {
   text-decoration: none;
 }
 
-.product_grid a:hover {
-  text-decoration: underline;
-}
-
 .product_item img {
   max-width: 350px;
+  margin-top: 5px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.product_item a{
+  transition: 0.2s ease all;
+}
+
+.product_item a:hover{
+  text-decoration: none;
+  color: white;
 }
 
 footer {
@@ -108,6 +127,35 @@ footer {
   padding-bottom: 5px;
 }
 
+
 /* Individual Product Pages Styling  */
+.individual_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  padding: 10px 5px 5px 20px;
+  background-color: rgb(255, 255, 255);
+}
 
+.individual_item {
+  text-align: center;
+  font-weight: bold;
+  margin: 5px;
+  border-radius: 10px;
+  background-color:rgb(202, 139, 243);
+}
 
+.individual_grid a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.individual_grid a:hover{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  /* text-decoration: underline; */
+}
+
+.individual_item img {
+  max-width: 350px;
+  margin-top: 5px;
+}

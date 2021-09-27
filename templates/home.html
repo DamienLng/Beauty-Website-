@@ -14,7 +14,7 @@
   <div class="product_grid"> <!-- contains all products -->
     {% for Product in products %} 
     <div class="product_item"> <!-- each product is in one of these -->
-      <a href="{{ url_for('product') }}"> <!-- product image links -->
+      <a href="{{ url_for('product', id=Product.id) }}"> <!-- product image links -->
         <img src= "{{ Product.image }}"><p class="small">{{ Product.name }}</p>
         <p>Price: ${{ Product.price }}</p> <!-- Displaying images, names and prices from beauty database -->
       </a>

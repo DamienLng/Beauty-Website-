@@ -13,7 +13,7 @@ import models
 @app.route('/')
 def home():
     products = models.Product.query.all()
-    print(products)
+    # print(products)
     return render_template('home.html', products = products)
 
 # Each Subcategory Page 
@@ -22,17 +22,18 @@ def subcat(category, name):
     subcat = models.Subcategory.query.filter_by(name=name).all()
     return render_template('subcategory.html', subcat = subcat)
 
+# Individual Product Pages 
+@app.route('/product/<int:id>')
+def product(id): 
+    product = models.Product.query.filter_by(id=id).first_or_404()
+    print(product)
+    return render_template('product.html', product = product)
+
 # Contact Us Page 
 @app.route('/contact_us')
 def contact():
     
     return render_template('contact_us.html')
-
-# Individual Product Pages 
-@app.route('/product.html')
-def product(): 
-
-    return render_template('product.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
