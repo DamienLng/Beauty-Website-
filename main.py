@@ -12,9 +12,9 @@ import models
 # Homepage route/query for all Products
 @app.route('/')
 def home():
-    products = models.Product.query.all()
+    home = models.Product.query.all()
     # print(products)
-    return render_template('home.html', products = products)
+    return render_template('home.html', home = home)
 
 # Each Subcategory Page 
 @app.route("/<string:category>/<string:name>")

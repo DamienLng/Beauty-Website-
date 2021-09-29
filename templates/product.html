@@ -3,24 +3,28 @@
 {% extends 'layout.html' %}
 {% block content %}
 
-<main>
 
-  <head>Hi</head>
-  <div class="individual_grid">
-    {% for Product in product %} 
-    <div class="individual_item">
-      <img src= "{{ Product.image }}"><p class="small">{{ Product.name }}</p>
+<body>
+
+  <div class='individual_page_box'>
+
+    <div class='product_name'>
+      <h2>Name of the Product</h2>
     </div>
-    {% endfor %}
+
+    <div class='product_image'>
+      <h2>Product image</h2>
+    </div>
+
+    <div class='product_info'>
+      <h2>Product Information</h2>
+    </div>
   </div>
-</main>
+
+</body>
+
+
 
 {% endblock %}
 
-
-
-<!-- <div class="individual_item">Two</div> -->
-<!-- 
-<div class="individual_item">Three</div>
-<div class="individual_item">Four</div> -->
 

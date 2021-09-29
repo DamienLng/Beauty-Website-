@@ -5,6 +5,16 @@ header{
   padding-top: 3vh;
 }
 
+header h1 a {
+  text-decoration: none;
+  transition: 0.2s ease all;
+}
+
+header h1 a:hover{
+  text-decoration: none;
+  color: rgb(202, 139, 243);
+}
+
 /* The navigation Bar Styling */
 .navbar {
   overflow: hidden;
@@ -125,37 +135,47 @@ footer {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  /* position: fixed;
+  bottom: 0px; */
+  width: 100%;
 }
 
 
 /* Individual Product Pages Styling  */
-.individual_grid {
-  display: grid;
-  grid-template-columns: repeat(3, 370px);
-  padding: 10px 5px 5px 20px;
-  background-color: rgb(255, 255, 255);
+.individual_page_box {
+  background-color: aquamarine;
+}
+.product_name {
+  /* text-align: end; */
+  /* margin-left: 600px; */
+  margin-top: 50px;
+  /* margin-bottom: 40px; */
+  margin-right: 50px;
+  width: 500px;
+  border: 3px solid #000000;
+  float: right
 }
 
-.individual_item {
+.product_name h2 {
   text-align: center;
-  font-weight: bold;
-  margin: 5px;
-  border-radius: 10px;
-  background-color:rgb(202, 139, 243);
 }
 
-.individual_grid a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
+.product_image {
+  text-align: center;
+  height: 500px;
+  width: 500px;
+  margin-left: 50px;
+  margin-top: 50px; 
+  border: 3px solid #333;
+  float: left
 }
 
-.individual_grid a:hover{
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  /* text-decoration: underline; */
+.product_image h2 {
+  padding: 200px;
 }
 
-.individual_item img {
-  max-width: 350px;
-  margin-top: 5px;
+.product_info {
+  margin-right: 50px;
+  margin-top: 50px;
+  border: 3px solid #333
 }

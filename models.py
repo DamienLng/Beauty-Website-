@@ -28,9 +28,8 @@ class Category(db.Model):
   name = db.Column(db.String())
   description = db.Column(db.Text())
 
-  products = db.relationship('Product', secondary=ProductCategory, back_populates='category')
+  home = db.relationship('Product', secondary=ProductCategory, back_populates='category')
   # brands = db.relationship('Brand', secondary=Brandcategory, back_populates='brandcategory')
-  #products = db.relationship('Product', backref="categories")
 
 
 # class Brand(db.Model):
@@ -51,7 +50,8 @@ class Subcategory(db.Model):
 
 
   # brands = db.relationship('Brand', secondary=BrandSubcategory, back_populates='subcategory')
-  products = db.relationship('Product', secondary=ProductSubcategory, back_populates='subcategory')
+  home = db.relationship('Product', secondary=ProductSubcategory, back_populates='subcategory')
+
 
 
 class Product(db.Model):
@@ -66,8 +66,9 @@ class Product(db.Model):
   # category = db.Column(db.Integer, db.ForeignKey("Category.id"))
   # brand = db.Column(db.Integer, db.ForeignKey("Brand.id"))
 
-  category = db.relationship('Category', secondary=ProductCategory, back_populates='products')
-  subcategory = db.relationship('Subcategory', secondary=ProductSubcategory, back_populates='products')
+  category = db.relationship('Category', secondary=ProductCategory, back_populates='home')
+  subcategory = db.relationship('Subcategory', secondary=ProductSubcategory, back_populates='home')
+
 
 
 
