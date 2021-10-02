@@ -179,3 +179,29 @@ footer {
   margin-top: 50px;
   border: 3px solid #333
 }
+
+/* Subcategory Info on Subcategory Pages */
+.subcategory_info {
+  margin: 5px;
+  text-align: center;
+}
+
+.subcategory_info p {
+  color: rgb(0, 0, 0);
+}
+
+/* .subcategory_items img {
+  max-width: 350px;
+  margin-top: 5px;
+}
+
+.subcategory.image {
+  text-align: center;
+  height: 500px;
+  width: 500px;
+  margin-left: 50px;
+  margin-top: 50px; 
+  border: 3px solid #333;
+  float: left
+} */
+

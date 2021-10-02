@@ -12,15 +12,17 @@ import models
 # Homepage route/query for all Products
 @app.route('/')
 def home():
-    home = models.Product.query.all()
+    products = models.Product.query.all()
     # print(products)
-    return render_template('home.html', home = home)
+    return render_template('home.html', products = products)
 
 # Each Subcategory Page 
 @app.route("/<string:category>/<string:name>")
 def subcat(category, name):
     subcat = models.Subcategory.query.filter_by(name=name).all()
-    return render_template('subcategory.html', subcat = subcat)
+    for Subcategory in subcat:
+        print(Subcategory.products)
+    return render_template('subcategory.html', subcat = subcat, products = Subcategory.products)
 
 # Individual Product Pages 
 @app.route('/product/<int:id>')

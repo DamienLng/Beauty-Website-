@@ -2,13 +2,13 @@ from sqlalchemy.orm import backref
 from main import db
 
 ProductCategory = db.Table('ProductCategory', db.Model.metadata,
-                    db.Column('Product_id', db.Integer, db.ForeignKey('Product.id')),
-                    db.Column('Category_id', db.Integer, db.ForeignKey('Category.id'))
+                    db.Column('pid', db.Integer, db.ForeignKey('Product.id')),
+                    db.Column('cid', db.Integer, db.ForeignKey('Category.id'))
                     )
 
 ProductSubcategory = db.Table('ProductSubcategory', db.Model.metadata,
-                    db.Column('Product_id', db.Integer, db.ForeignKey('Product.id')),
-                    db.Column('Subcategory_id', db.Integer, db.ForeignKey('Subcategory.id'))
+                    db.Column('pid', db.Integer, db.ForeignKey('Product.id')),
+                    db.Column('sid', db.Integer, db.ForeignKey('Subcategory.id'))
                    )
 
 # BrandCategory = db.Table('BrandCategory', db.Model.metadata,
@@ -28,7 +28,7 @@ class Category(db.Model):
   name = db.Column(db.String())
   description = db.Column(db.Text())
 
-  home = db.relationship('Product', secondary=ProductCategory, back_populates='category')
+  products = db.relationship('Product', secondary=ProductCategory, back_populates='category')
   # brands = db.relationship('Brand', secondary=Brandcategory, back_populates='brandcategory')
 
 
@@ -50,7 +50,7 @@ class Subcategory(db.Model):
 
 
   # brands = db.relationship('Brand', secondary=BrandSubcategory, back_populates='subcategory')
-  home = db.relationship('Product', secondary=ProductSubcategory, back_populates='subcategory')
+  products = db.relationship('Product', secondary=ProductSubcategory, back_populates='subcategory')
 
 
 
@@ -66,8 +66,8 @@ class Product(db.Model):
   # category = db.Column(db.Integer, db.ForeignKey("Category.id"))
   # brand = db.Column(db.Integer, db.ForeignKey("Brand.id"))
 
-  category = db.relationship('Category', secondary=ProductCategory, back_populates='home')
-  subcategory = db.relationship('Subcategory', secondary=ProductSubcategory, back_populates='home')
+  category = db.relationship('Category', secondary=ProductCategory, back_populates='products')
+  subcategory = db.relationship('Subcategory', secondary=ProductSubcategory, back_populates='products')
 
 
 

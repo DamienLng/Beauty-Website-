@@ -1,17 +1,33 @@
-<html>
-  <head>
-    <title>Beauty Company - {{ page_title }}</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-  </head>
+{% extends 'layout.html' %}
+{% block content %}
 
-  <body>
-    {% include 'header.html' %}
-    {% include 'nav.html' %}
-    {% for Subcategory in subcat %} 
+
+<div>
+  {% for Subcategory in subcat %}
+  <div class="subcategory_info"> <!-- each product is in one of these -->
     <p>Description: {{ Subcategory.description }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<main>
+
+  <div class="filters"><!-- left hand bar in grey -->
+    <h2>FILTERS</h2>
+    <p>some stuff here</p>
+  </div>
+
+  <div class="product_grid"> <!-- contains all products -->
+    {% for Product in products %} 
+    <div class="product_item"> <!-- each product is in one of these -->
+      <a href="{{ url_for('product', id=Product.id) }}"> <!-- product image links -->
+        <img src= "{{ Product.image }}"><p class="small">{{ Product.name }}</p>
+        <p>Price: ${{ Product.price }}</p> <!-- Displaying images, names and prices from beauty database -->
+      </a>
+    </div><!-- product_item -->
     {% endfor %}
-    {% block content %}{% endblock %}
-    {% include 'footer.html' %}
-  </body>
-</html>
+  </div><!-- product_grid -->
+</main>
+
+{% endblock %}
 
