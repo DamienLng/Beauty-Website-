@@ -16,13 +16,21 @@ def home():
     # print(products)
     return render_template('home.html', products = products)
 
-# Each Subcategory Page 
-@app.route("/<string:category>/<string:name>")
+# Subcategory pages for skincare, makeup and hair, hand & body
+@app.route('/<string:category>/<string:name>')
 def subcat(category, name):
     subcat = models.Subcategory.query.filter_by(name=name).all()
     for Subcategory in subcat:
         print(Subcategory.products)
     return render_template('subcategory.html', subcat = subcat, products = Subcategory.products)
+
+# Subcategory page for different brands of products
+@app.route('/<string:category>/<string:name>')
+def brands(category, name):
+    brands = models.Product.query.filter_by(name=name).all()
+    for Product in brands:
+        print(Product.products)
+    return render_template('brand.html', brands = brands, products = Product.products)
 
 # Individual Product Pages 
 @app.route('/product/<int:id>')
