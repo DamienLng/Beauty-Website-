@@ -36,7 +36,6 @@ def brands(category, name):
 @app.route('/product/<int:id>')
 def product(id): 
     product = models.Product.query.filter_by(id=id).first_or_404()
-    print(product)
     return render_template('product.html', product = product)
 
 # Contact Us Page 

@@ -6,23 +6,25 @@
 
 <body>
 
-  <div class='individual_page_box'>
+  <!-- <div class='individual_page_box'> -->
+  <div class="individual_product_page">
 
-    <div class='product_name'>
-      <h2>Name of the Product</h2>
+    <div class='individual_product_name'>
+      <h2>{{ product.name }}</h2>
     </div>
 
-    <div class='product_image'>
-      <h2>Product image</h2>
+    <div class='individual_product_image'>
+      <img src= "{{ product.image }}" alt="Product Image">
     </div>
 
-    <div class='product_info'>
-      <h2>Product Information</h2>
+    <div class='individual_product_info'>
+      <p>{{ product.price }}</p>
+      <p>{{ product.description }}</p>
+      <p>{{ product.ingredients }}</p>
     </div>
     
   </div>
-
-
+  
 </body>
 
 

@@ -1,3 +1,11 @@
+/* Default styling for every page  */
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 /* header styling */
 header{
   margin: 3vh;
@@ -6,12 +14,10 @@ header{
 }
 
 header h1 a {
-  text-decoration: none;
   transition: 0.2s ease all;
 }
 
 header h1 a:hover{
-  text-decoration: none;
   color: rgb(202, 139, 243);
 }
 
@@ -19,6 +25,7 @@ header h1 a:hover{
 .navbar {
   overflow: hidden;
   background-color: #333;
+  width: 100%;
 }
 /* Navigation links */
 .navbar a {
@@ -27,7 +34,6 @@ header h1 a:hover{
   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
 }
 /* The subnavigation menu */
 .subnav {
@@ -62,7 +68,6 @@ header h1 a:hover{
 .subnav-content a {
   float: left;
   color: rgb(0, 0, 0);
-  text-decoration: none;
   transition: 0.2s ease all;
 }
 
@@ -106,7 +111,6 @@ img {
 
 .product_grid a {
   color: rgb(0, 0, 0);
-  text-decoration: none;
 }
 
 .product_item img {
@@ -114,18 +118,11 @@ img {
   margin-top: 5px;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 .product_item a{
   transition: 0.2s ease all;
 }
 
 .product_item a:hover{
-  text-decoration: none;
   color: white;
 }
 
@@ -144,40 +141,43 @@ footer {
 
 
 /* Individual Product Pages Styling  */
-.product_name {
+.individual_product_name {
+  text-align: center;
+  font-weight: bold;
+  color: black;
   margin-top: 50px;
   margin-right: 50px;
   width: 500px;
   height: 70px;
-  border: 3px solid #000000;
+  outline: 3px solid #000000;
   float: right
 }
 
-.product_name h2 {
+.individual_product_name h2 {
   text-align: center;
 }
 
-.product_image {
+.individual_product_image {
   text-align: center;
   height: 500px;
   width: 500px;
   margin-left: 50px;
   margin-top: 50px; 
-  border: 3px solid #333;
+  outline: 3px solid #333;
   float: left
 }
 
-.product_image h2 {
+.individual_product_image h2 {
   padding: 200px;
 }
 
-.product_info {
+.individual_product_info {
   margin-top: 20px;
   margin-right: 50px;
   margin-bottom: 50px;
   width: 500px;
   height: 400px;
-  border: 3px solid #333;
+  outline: 3px solid #333;
   float: right;
 }
 

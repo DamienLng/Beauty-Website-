@@ -15,7 +15,7 @@
     {% for Product in products %} 
     <div class="product_item"> <!-- each product is in one of these -->
       <a href="{{ url_for('product', id=Product.id) }}"> <!-- product image links -->
-        <img src= "{{ Product.image }}"><p class="small">{{ Product.name }}</p>
+        <img src= "{{ Product.image }}" alt="Product Image"><p class="product_name">{{ Product.name }}</p>
         <p>Price: ${{ Product.price }}</p> <!-- Displaying images, names and prices from beauty database -->
       </a>
     </div><!-- product_item -->
