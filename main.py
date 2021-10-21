@@ -44,11 +44,22 @@ def contact():
     
     return render_template('contact_us.html')
 
+# Individual Ingredients Button
+# const article = document.querySelector("#content");
+
+# def ingredients_info():
+#      if (article.className == "open") {
+#        // read less
+#        article.className = "";
+#        button.innerHTML = "Show more";
+#      } else {
+#        //read more
+#        article.className = "open";
+#        button.innerHTML = "Show less";
+#      }
+
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
 
 
 # Replace Underscores test code

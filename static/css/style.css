@@ -48,7 +48,6 @@ header h1 a:hover{
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
   margin: 0;
 }
 /* Add a purple background colour to navigation links on hover */
@@ -142,19 +141,19 @@ footer {
 
 /* Individual Product Pages Styling  */
 .individual_product_name {
-  text-align: center;
-  font-weight: bold;
-  color: black;
   margin-top: 50px;
   margin-right: 50px;
   width: 500px;
   height: 70px;
-  outline: 3px solid #000000;
+  /* outline: 3px solid #000000; */
   float: right
 }
 
 .individual_product_name h2 {
+  font-family: Playfair Display;
+  font-weight: bolder;
   text-align: center;
+  color: black;
 }
 
 .individual_product_image {
@@ -163,7 +162,7 @@ footer {
   width: 500px;
   margin-left: 50px;
   margin-top: 50px; 
-  outline: 3px solid #333;
+  /* outline: 3px solid #333; */
   float: left
 }
 
@@ -177,10 +176,26 @@ footer {
   margin-bottom: 50px;
   width: 500px;
   height: 400px;
-  outline: 3px solid #333;
+  /* outline: 3px solid #333; */
   float: right;
 }
 
+.individual_product_info p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  padding: 20px;
+  /* margin: 20px; */
+}
+
+.individual_footer {
+  display: block;
+  height: 30px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+}
 
 /* Subcategory Info on Subcategory Pages */
 .subcategory_info {
@@ -194,4 +209,17 @@ footer {
   color: rgb(0, 0, 0);
 }
 
+/* ingredients_button */
+.btn{
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+/* article.open {
+  max-height: 1000px;
+}
+
+.product_ingredients {
+  max-height: 270px;
+} */
 

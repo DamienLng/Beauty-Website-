@@ -1,10 +1,16 @@
 <!-- individual product pages layout  -->
 
-{% extends 'layout.html' %}
-{% block content %}
 
+<head>
+  <title>Beauty Company - {{ page_title }}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
 
 <body>
+
+  {% include 'header.html' %}
+  {% include 'nav.html' %}
+  {% block content %}{% endblock %}
 
   <!-- <div class='individual_page_box'> -->
   <div class="individual_product_page">
@@ -18,23 +24,27 @@
     </div>
 
     <div class='individual_product_info'>
-      <p>{{ product.price }}</p>
-      <p>{{ product.description }}</p>
-      <p>{{ product.ingredients }}</p>
+      <!-- <p class='subtitle'>Price: ${{ product.price }}</p> -->
+      <p>Price: ${{ product.price }}</p>
+      <p>Description: {{ product.description }}</p>
+      
+      <article class='product_ingredients'> 
+        <!-- <p class='subtitle'>Ingredients:</p><p>{{ product.ingredients }}</p> -->
+        <p>Ingredients: {{ product.ingredients }}</P>
+      </article>
+      
+      <!-- <button class='btn' onclick="ingredients_info()">Ingredients</button>  -->
+      
     </div>
-    
+
   </div>
   
 </body>
 
+<footer class='individual_footer'>
+  <h3>&copy; 2021 Beauty Company</h3>
+</footer>
 
 
-<!-- Need to get rid of float right and left since that ignores any overlapping so footer will be at top and cover 
-everything else. Therefore put product name and product image boxes into one div and have the parent div cover all 
-of that. Also try use margins or display grid or display flex on the parent div.  -->
-
-
-
-{% endblock %}
 
 
