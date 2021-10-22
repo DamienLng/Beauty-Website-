@@ -215,11 +215,20 @@ footer {
   color: rgb(0, 0, 0);
 }
 
-/* article.open {
-  max-height: 1000px;
+/* Contact Us Page  */
+.contact_wrapper {
+  margin: 0 auto;
+  width: 500px;
 }
 
-.product_ingredients {
-  max-height: 270px;
-} */
+.contact_wrapper p {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+}
+
+.contact_header {
+  font-family: Playfair Display;
+  text-align: center;
+  padding: 20px;
+}
 
