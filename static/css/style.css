@@ -75,7 +75,7 @@ header h1 a:hover{
   display: block;
 }
 
-/* Homepage Styling  */
+/* Default product grid and filter styling  */
 main {
   display: flex;
   flex-direction: row;
@@ -95,7 +95,7 @@ main {
 }
 
 
-/* Product image grid box styling  */
+/* Product image & grid box styling  */
 img {
   border-radius: 10px;
 }
@@ -125,6 +125,7 @@ img {
   color: white;
 }
 
+/* Styling of Footer on every page except for individual product page footer */
 footer {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -138,14 +139,12 @@ footer {
   width: 100%;
 }
 
-
 /* Individual Product Pages Styling  */
 .individual_product_name {
   margin-top: 50px;
   margin-right: 50px;
   width: 500px;
   height: 70px;
-  /* outline: 3px solid #000000; */
   float: right
 }
 
@@ -162,7 +161,6 @@ footer {
   width: 500px;
   margin-left: 50px;
   margin-top: 50px; 
-  /* outline: 3px solid #333; */
   float: left
 }
 
@@ -176,7 +174,6 @@ footer {
   margin-bottom: 50px;
   width: 500px;
   height: 400px;
-  /* outline: 3px solid #333; */
   float: right;
 }
 
@@ -184,9 +181,13 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   padding: 20px;
-  /* margin: 20px; */
 }
 
+.ingredients_info {
+  text-transform: capitalize;
+}
+
+/* Individual Page Footer */
 .individual_footer {
   display: block;
   height: 30px;
@@ -206,12 +207,6 @@ footer {
 }
 
 .subcategory_info p {
-  color: rgb(0, 0, 0);
-}
-
-/* ingredients_button */
-.btn{
-  background: #ffffff;
   color: rgb(0, 0, 0);
 }
 

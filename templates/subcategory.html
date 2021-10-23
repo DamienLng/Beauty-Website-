@@ -1,34 +1,33 @@
 {% extends 'layout.html' %}
 {% block content %}
 
-
-<div>
+<div> 
   {% for Subcategory in subcat %}
-  <div class="subcategory_info"> <!-- each product is in one of these -->
-    <p>Description: {{ Subcategory.description }}</p>
+  <div class="subcategory_info"> 
+    <p>Description: {{ Subcategory.description }}</p> each subcategory_description
   </div>
   {% endfor %}
 </div>
 
-<main>
+<main> <!-- main content for the subcategory page -->
 
-  <div class="filters"><!-- left hand bar in grey -->
+  <div class="filters"> <!-- filtering system for products  -->
     <h2>FILTERS</h2>
     <p>some stuff here</p>
-  </div>
+  </div> <!-- filtering system for products  -->
 
   <div class="product_grid"> <!-- contains all products -->
     {% for Product in products %} 
     <div class="product_item"> <!-- each product is in one of these -->
-      <a href="{{ url_for('product', id=Product.id) }}"> <!-- product image links -->
+      <a href="{{ url_for('product', id=Product.id) }}"> <!-- product image link -->
         <img src= "{{ Product.image }}" alt="Product Image"><p class="product_name">{{ Product.name }}</p>
         <p>Price: ${{ Product.price }}</p> <!-- Displaying images, names and prices from beauty database -->
-      </a>
+      </a> <!-- product image link -->
     </div><!-- product_item -->
     {% endfor %}
   </div><!-- product_grid -->
 
-</main>
+</main> <!-- end of main content for the subcategory page -->
 
 {% endblock %}
 

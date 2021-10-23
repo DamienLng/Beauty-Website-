@@ -44,30 +44,7 @@ def contact():
     
     return render_template('contact_us.html')
 
-# Individual Ingredients Button
-# const article = document.querySelector("#content");
-
-# def ingredients_info():
-#      if (article.className == "open") {
-#        // read less
-#        article.className = "";
-#        button.innerHTML = "Show more";
-#      } else {
-#        //read more
-#        article.className = "open";
-#        button.innerHTML = "Show less";
-#      }
 
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-# Replace Underscores test code
-# underscore = "Facial_Treatments"
-# alter = underscore.replace("_", " ")
-# print(alter)
-# OR
-# import jinja2
-# test = jinja2.Template('{{ test1 | replace("Facial_Treatments", "Facial Treatments") }}')
-# print(test)
-# General page route/query for all Subcategory pages     
