@@ -1,15 +1,14 @@
 {% extends 'layout.html' %}
 {% block content %}
 
-<div> 
-  {% for Subcategory in subcat %}
-  <div class="subcategory_info"> 
-    <p>Description: {{ Subcategory.description }}</p> each subcategory_description
-  </div>
-  {% endfor %}
+{% for Subcategory in subcat %}
+<div class="subcategory_info"> 
+  <p>Description: {{ Subcategory.description }}</p> each subcategory_description
 </div>
+{% endfor %}
 
-<main> <!-- main content for the subcategory page -->
+
+<main class="grid"> <!-- main content for the subcategory page -->
 
   <div class="filters"> <!-- filtering system for products  -->
     <h2>FILTERS</h2>

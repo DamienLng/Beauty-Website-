@@ -76,10 +76,9 @@ header h1 a:hover{
 }
 
 /* Default product grid and filter styling  */
-main {
+.grid {
   display: flex;
   flex-direction: row;
-  background-color: rgb(202, 139, 243);
 }
 .filters {
   float: left;
@@ -226,4 +225,13 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+
+
+
+/* Make parent divv where both product image and info are in the parent divv and set css as display flex 
+justify-content: space around OR Even
+get rid of float left or right in the text and image 
+delete footer bottom fixed line */
+
 

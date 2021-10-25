@@ -1,11 +1,14 @@
 <!-- individual product page layout  -->
 
-<head>
-  <title>Nana Beauty {{ page_title }}</title>
+<head> 
+  <title>Nana Beauty</title>
   <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
-<body>
+<!-- extends layout stuff -->
+<!-- get rid of body tags in some html files since extends already has a body, then make main = id instead of class for different styling purposes on different pages.  -->
+
+<main>
   {% include 'header.html' %}
   {% include 'nav.html' %}
   {% block content %}{% endblock %}
@@ -26,9 +29,10 @@
     </div> <!-- individual_product_info -->
 
   </div> <!-- individual_product_page -->
-</body>
+</main>
 
 <!-- Footer for Individual Product Page -->
 <footer class='individual_footer'>
   <h3>&copy; 2021 Beauty Company</h3>
 </footer>
+
