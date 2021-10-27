@@ -1,38 +1,51 @@
 <!-- individual product page layout  -->
 
-<head> 
-  <title>Nana Beauty</title>
-  <link rel="stylesheet" href="/static/css/style.css">
-</head>
-
-<!-- extends layout stuff -->
-<!-- get rid of body tags in some html files since extends already has a body, then make main = id instead of class for different styling purposes on different pages.  -->
+{% extends 'layout.html' %} 
+{% block content %} 
 
 <main>
-  {% include 'header.html' %}
-  {% include 'nav.html' %}
-  {% block content %}{% endblock %}
   <div class="individual_product_page"> <!-- individual_product_page -->
-    
+   
     <div class='individual_product_name'> <!-- individual_product_name -->
       <h2>{{ product.name }}</h2>
     </div> <!-- individual_product_name -->
-
+ 
     <div class='individual_product_image'> <!-- individual_product_image -->
       <img src= "{{ product.image }}" alt="Product Image">
     </div> <!-- individual_product_image -->
-    
+   
     <div class='individual_product_info'> <!-- individual_product_info -->
       <p>Price: ${{ product.price }}</p>
       <p>Description: {{ product.description }}</p>
       <p class="ingredients_info">Ingredients: {{ product.ingredients }}</P> <!-- seperate class for styling ingredients info -->
     </div> <!-- individual_product_info -->
-
+ 
   </div> <!-- individual_product_page -->
 </main>
 
+
+
+<!-- <main>
+  <div class="individual_product_page"> 
+ 
+    <div class='individual_product_image'> 
+      <img src= "{{ product.image }}" alt="Product Image">
+    </div> 
+   
+    <div class='individual_product_details'> 
+      <h2>{{ product.name }}</h2>
+      <p>Price: ${{ product.price }}</p>
+      <p>Description: {{ product.description }}</p>
+      <p class="ingredients_info">Ingredients: {{ product.ingredients }}</P> 
+    </div> 
+
+  </div> 
+</main> -->
+
+{% endblock %}
+
 <!-- Footer for Individual Product Page -->
-<footer class='individual_footer'>
+<!-- <footer class='individual_footer'>
   <h3>&copy; 2021 Beauty Company</h3>
-</footer>
+</footer> -->
 

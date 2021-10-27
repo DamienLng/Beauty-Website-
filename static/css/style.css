@@ -139,12 +139,46 @@ footer {
 }
 
 /* Individual Product Pages Styling  */
+.individual_product_page {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .individual_product_details { */
+  /* margin-top: 200px; */
+  /* margin-right: 50px;
+  margin-bottom: 50px;
+  width: 500px;
+  height: 400px;
+} */
+
+/* .individual_product_details h2 { */
+  /* width: 500px;
+  height: 70px; */
+  /* font-family: Playfair Display;
+  font-weight: bolder;
+  text-align: center;
+  color: black;
+} */
+
+/* .individual_product_details p {
+  margin-top: 200px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  padding: 20px;
+} */
+
+/* .ingredients_info {
+  text-transform: capitalize;
+} */
+
+
 .individual_product_name {
   margin-top: 50px;
   margin-right: 50px;
   width: 500px;
   height: 70px;
-  float: right
+  /* float: right */
 }
 
 .individual_product_name h2 {
@@ -155,12 +189,18 @@ footer {
 }
 
 .individual_product_image {
-  text-align: center;
+  display: block;
+  max-width: 400px;
+  max-height: 400px;
+  height: auto;
+  width: auto;
+  /* text-align: center;
   height: 500px;
   width: 500px;
+  object-fit: cover;
   margin-left: 50px;
-  margin-top: 50px; 
-  float: left
+  margin-top: 50px;  */
+  /* float: left */
 }
 
 .individual_product_image h2 {
@@ -168,12 +208,12 @@ footer {
 }
 
 .individual_product_info {
-  margin-top: 20px;
+  margin-top: 150px;
   margin-right: 50px;
   margin-bottom: 50px;
   width: 500px;
   height: 400px;
-  float: right;
+  /* float: right; */
 }
 
 .individual_product_info p {
@@ -187,7 +227,7 @@ footer {
 }
 
 /* Individual Page Footer */
-.individual_footer {
+/* .individual_footer {
   display: block;
   height: 30px;
   background-color: rgb(0, 0, 0);
@@ -195,7 +235,7 @@ footer {
   text-align: center;
   position: fixed;
   bottom: 0px;
-}
+} */
 
 /* Subcategory Info on Subcategory Pages */
 .subcategory_info {
@@ -233,5 +273,9 @@ footer {
 justify-content: space around OR Even
 get rid of float left or right in the text and image 
 delete footer bottom fixed line */
+/* 
+Finished extending layout in product.html, and commented out individual footer. Now need to get rid of float left
+and right in info, image and maybe name?. Also delete footer fixed at bottom of the footer css. Furthermore 
+may need to chnage display inline features etc.  */
 
 
