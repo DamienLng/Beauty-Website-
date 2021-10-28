@@ -131,21 +131,20 @@ footer {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
-  /* display: inline-block; */
   height: 30px;
   width: 100%;
 }
 
-/* Individual Product Pages Styling  */
+/* individual product page and contact us page height adjustment  */
 .individual {
   min-height: 80vh;
 }
 
+/* Individual Product Pages Styling  */
 .individual_product_name {
   margin-top: 50px;   
   margin-right: 200px;
   margin-left: 800px;
-  /* height: 70px; */
   text-align: center;
 }
 
@@ -192,17 +191,6 @@ footer {
   text-transform: capitalize;
 }
 
-/* Individual Page Footer */
-/* .individual_footer {
-  display: block;
-  height: 30px;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  text-align: center;
-  position: fixed;
-  bottom: 0px;
-} */
-
 /* Subcategory Info on Subcategory Pages */
 .subcategory_info {
   margin: 5px;
@@ -231,17 +219,3 @@ footer {
   text-align: center;
   padding: 20px;
 }
-
-
-
-
-/* Make parent divv where both product image and info are in the parent divv and set css as display flex 
-justify-content: space around OR Even
-get rid of float left or right in the text and image 
-delete footer bottom fixed line */
-/* 
-Finished extending layout in product.html, and commented out individual footer. Now need to get rid of float left
-and right in info, image and maybe name?. Also delete footer fixed at bottom of the footer css. Furthermore 
-may need to chnage display inline features etc.  */
-
-
