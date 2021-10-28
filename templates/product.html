@@ -3,26 +3,32 @@
 {% extends 'layout.html' %} 
 {% block content %} 
 
-<main>
+<main class="individual">
   <div class="individual_product_page"> <!-- individual_product_page -->
    
     <div class='individual_product_name'> <!-- individual_product_name -->
       <h2>{{ product.name }}</h2>
     </div> <!-- individual_product_name -->
  
-    <div class='individual_product_image'> <!-- individual_product_image -->
+    <div class="individual_flex">
       <img src= "{{ product.image }}" alt="Product Image">
-    </div> <!-- individual_product_image -->
    
-    <div class='individual_product_info'> <!-- individual_product_info -->
-      <p>Price: ${{ product.price }}</p>
-      <p>Description: {{ product.description }}</p>
-      <p class="ingredients_info">Ingredients: {{ product.ingredients }}</P> <!-- seperate class for styling ingredients info -->
-    </div> <!-- individual_product_info -->
+      <div class='individual_product_info'> <!-- individual_product_info -->
+        <p>Price: ${{ product.price }}</p>
+        <p>Description: {{ product.description }}</p>
+        <p class="ingredients_info">Ingredients: {{ product.ingredients }}</P> <!-- seperate class for styling ingredients info -->
+      </div> <!-- individual_product_info -->
+    </div>
  
   </div> <!-- individual_product_page -->
 </main>
 
+{% endblock %}
+
+<!-- Footer for Individual Product Page -->
+<!-- <footer class='individual_footer'>
+  <h3>&copy; 2021 Beauty Company</h3>
+</footer> -->
 
 
 <!-- <main>
@@ -42,10 +48,7 @@
   </div> 
 </main> -->
 
-{% endblock %}
 
-<!-- Footer for Individual Product Page -->
-<!-- <footer class='individual_footer'>
-  <h3>&copy; 2021 Beauty Company</h3>
-</footer> -->
+
+
 

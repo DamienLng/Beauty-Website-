@@ -129,91 +129,57 @@ footer {
   background-color: rgb(0, 0, 0);
   color: white;
   text-align: center;
-  position: relative;
   padding-top: 5px;
   padding-bottom: 5px;
-  display: inline-block;
+  /* display: inline-block; */
   height: 30px;
-  bottom: 0px;
   width: 100%;
 }
 
 /* Individual Product Pages Styling  */
-.individual_product_page {
-  display: flex;
-  justify-content: space-around;
+.individual {
+  min-height: 80vh;
 }
 
-/* .individual_product_details { */
-  /* margin-top: 200px; */
-  /* margin-right: 50px;
-  margin-bottom: 50px;
-  width: 500px;
-  height: 400px;
-} */
-
-/* .individual_product_details h2 { */
-  /* width: 500px;
-  height: 70px; */
-  /* font-family: Playfair Display;
-  font-weight: bolder;
-  text-align: center;
-  color: black;
-} */
-
-/* .individual_product_details p {
-  margin-top: 200px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: normal;
-  padding: 20px;
-} */
-
-/* .ingredients_info {
-  text-transform: capitalize;
-} */
-
-
 .individual_product_name {
-  margin-top: 50px;
-  margin-right: 50px;
-  width: 500px;
-  height: 70px;
-  /* float: right */
+  margin-top: 50px;   
+  margin-right: 200px;
+  margin-left: 800px;
+  /* height: 70px; */
+  text-align: center;
 }
 
 .individual_product_name h2 {
   font-family: Playfair Display;
   font-weight: bolder;
-  text-align: center;
   color: black;
 }
 
-.individual_product_image {
-  display: block;
-  max-width: 400px;
-  max-height: 400px;
-  height: auto;
+.individual_product_image{
+  width: 50%;
+}
+.individual_flex img{
+  height: 400px;
   width: auto;
-  /* text-align: center;
-  height: 500px;
-  width: 500px;
-  object-fit: cover;
   margin-left: 50px;
-  margin-top: 50px;  */
-  /* float: left */
+  margin-top: 50px; 
 }
 
 .individual_product_image h2 {
   padding: 200px;
 }
 
+.individual_flex {  
+  display: flex;
+  justify-content: space-around;
+}
+
 .individual_product_info {
-  margin-top: 150px;
+  margin-top: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
+  margin-left: 100px;
   width: 500px;
-  height: 400px;
-  /* float: right; */
 }
 
 .individual_product_info p {
