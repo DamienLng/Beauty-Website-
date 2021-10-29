@@ -76,7 +76,7 @@ header h1 a:hover{
 }
 
 /* Default product grid styling */
-.grid {
+.main_grid {
   display: flex;
   flex-direction: row;
   background-color: rgb(202, 139, 243);
@@ -135,9 +135,10 @@ footer {
   width: 100%;
 }
 
-/* individual product page and contact us page height adjustment  */
+/* individual product page, contact us page, subcategory page and 404 page height adjustment  */
 .individual {
   min-height: 80vh;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Individual Product Pages Styling  */
@@ -181,11 +182,32 @@ footer {
 .individual_product_info p {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
-  padding: 20px;
+}
+
+.price_style {
+  text-transform: none;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.description_style {
+  text-transform: none;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.ingredients_style {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .ingredients_info {
-  text-transform: capitalize;
+  text-transform: lowercase;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 /* Subcategory Info on Subcategory Pages */
@@ -213,5 +235,39 @@ footer {
 .contact_header {
   font-family: Playfair Display;
   text-align: center;
-  padding: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+/* 404 Page Styling */
+.error_page {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+}
+
+.error_page h1 {
+  font-family: Playfair Display;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.error_page p {
+  font-family: 'Montserrat', sans-serif;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.error_page a {
+  color: black;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.error_page a:hover {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  color: rgb(202, 139, 243);
+  transition: 0.2s ease all;
 }

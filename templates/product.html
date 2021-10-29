@@ -14,9 +14,10 @@
       <img src= "{{ product.image }}" alt="Product Image">
    
       <div class='individual_product_info'> <!-- individual_product_info -->
-        <p>Price: ${{ product.price }}</p>
-        <p>Description: {{ product.description }}</p>
-        <p class="ingredients_info">Ingredients: {{ product.ingredients }}</P> <!-- seperate class for styling ingredients info -->
+        <p class="price_style">Price: ${{ product.price }}</p>
+        <p class="description_style">Description: {{ product.description }}</p>
+        <p class="ingredients_style">Ingredients:</p>
+        <p class="ingredients_info"> {{ product.ingredients }}</P> <!-- seperate class for styling ingredients info -->
       </div> <!-- individual_product_info -->
     </div>
  
